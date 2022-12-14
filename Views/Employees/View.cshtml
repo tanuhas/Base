@@ -1,0 +1,24 @@
+﻿@model WebApplication5.Models.UpdateEmployeeViewModel
+@{
+}
+<h1>Редактировать информацию о сотруднике</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">ФИО</label>
+        <input type="text" class="form-control" asp-for="FIO">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Должность</label>
+        <input type="phone" class="form-control" asp-for="Post">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Зарплата</label>
+        <input type="address" class="form-control" asp-for="Salary">
+    </div>
+    <button type="submit" class="btn btn-primary">Изменить</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Employees">Удалить</button>
+</form>

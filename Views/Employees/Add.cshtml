@@ -1,0 +1,19 @@
+﻿@model WebApplication5.Models.AddEmployeeViewModel
+@{
+}
+<h1>Добавить сотрудника</h1>
+<form method="post" action="Add">
+    <div class="mb-3">
+        <label for="" class="form-label">ФИО сотрудника</label>
+        <input type="text" class="form-control" asp-for="FIO">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Должность</label>
+        <input type="text" class="form-control" asp-for="Post">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Зарплата</label>
+        <input type="salary" class="form-control" asp-for="Salary">
+    </div>
+    <input type="submit" value="Отправить" />
+</form>

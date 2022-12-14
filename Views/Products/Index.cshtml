@@ -1,0 +1,37 @@
+﻿@model List<WebApplication5.Models.Domain.Product>
+@{
+}
+
+<h1>Товары</h1>
+
+<table class="table">
+    <form asp-controller="Products" asp-action="Index">
+        <p>
+            Введите название товара <input type="text" name="SearchString" />
+            <input type="submit" value="Поиск" />
+        </p>
+    </form>
+    <thead>
+        <tr>
+            <th>Артикул товара</th>
+            <th>Название товара</th>
+            <th>Количество товара</th>
+            <th>Цена товара</th>
+            <th>Название склада</th>
+            <th>Подробнее</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Quantity</td>
+                <td>@product.Price</td>
+                <td>@product.IdW</td>
+                <td><a href="Products/View/@product.Id">Подробнее</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

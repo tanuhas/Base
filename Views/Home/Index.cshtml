@@ -1,0 +1,14 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+
+@{
+    ViewData["Title"] = "Оптовая база";
+}
+<h1>Оптовая база</h1>
+@if (SignInManager.IsSignedIn(User))
+{
+<span>Вы находитесь в аккауте</span>
+}
+else{
+    <span> Вы не находитесь в аккаунте</span>
+}

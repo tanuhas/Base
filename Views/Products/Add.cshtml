@@ -1,0 +1,23 @@
+﻿@model WebApplication5.Models.AddProductViewModel
+@{
+}
+<h1>Добавить товар</h1>
+<form method="post" action="Add">
+    <div class="mb-3">
+        <label for="" class="form-label">Название товара</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Количество товара</label>
+        <input type="text" class="form-control" asp-for="Quantity">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Цена товара</label>
+        <input type="text" class="form-control" asp-for="Price">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Название склада</label>
+        <input type="text" class="form-control" asp-for="IdW">
+    </div>
+    <input type="submit" value="Отправить" />
+</form>

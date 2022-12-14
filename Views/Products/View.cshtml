@@ -1,0 +1,28 @@
+﻿@model WebApplication5.Models.UpdateProductViewModel
+@{
+}
+<h1>Редактировать информацию о товаре</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Артикул</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Название товара</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Количество товара</label>
+        <input type="text" class="form-control" asp-for="Quantity">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Цена товара</label>
+        <input type="text" class="form-control" asp-for="Price">
+    </div>
+     <div class="mb-3">
+        <label for="" class="form-label">Название склада</label>
+        <input type="text" class="form-control" asp-for="IdW">
+    </div>
+    <button type="submit" class="btn btn-primary">Изменить</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Products">Удалить</button>
+</form>

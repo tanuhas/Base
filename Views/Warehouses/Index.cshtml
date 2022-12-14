@@ -1,0 +1,36 @@
+﻿@model List<WebApplication5.Models.Domain.Warehouse>
+@{
+}
+
+<h1>Склады</h1>
+
+<table class="table">
+    <form asp-controller="Warehouses" asp-action="Index">
+        <p>
+            Введите название склада <input type="text" name="SearchString" />
+            <input type="submit" value="Поиск" />
+        </p>
+    </form>
+    <thead>
+        <tr>
+            <th>Артикул</th>
+            <th>Название склада</th>
+            <th>Номер телефона</th>
+            <th>Адрес склада</th>
+            <th>Подробнее</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var warehouse in Model)
+        {
+            <tr>
+                <td>@warehouse.Id</td>
+                <td>@warehouse.Name</td>
+                <td>@warehouse.PhoneNumber</td>
+                <td>@warehouse.Address</td>
+                <td><a href="Warehouses/View/@warehouse.Id">Подробнее</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
