@@ -20,10 +20,12 @@ internal class Program
         builder.Services.AddDbContext<WarehouseDbContext>(options => options.UseSqlServer(connectionString));
         builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-    builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-     .AddEntityFrameworkStores<WarehouseDbContext>();
+    //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+     //.AddEntityFrameworkStores<WarehouseDbContext>();
         //builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<IdentityRole>()
-          //  .AddEntityFrameworkStores<WarehouseDbContext>();
+        //  .AddEntityFrameworkStores<WarehouseDbContext>();
+        builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<IdentityRole>()
+  .AddEntityFrameworkStores<WarehouseDbContext>();
         builder.Services.AddControllersWithViews();
 
         var app = builder.Build();

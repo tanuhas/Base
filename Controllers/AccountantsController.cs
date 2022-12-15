@@ -19,7 +19,9 @@ namespace WebApplication5.Controllers
     {
         private readonly WarehouseDbContext _context;
         UserManager<User> _userManager;
+       // UserManager<IdentityUser> _userManager;
         public AccountantsController(WarehouseDbContext context, UserManager<User> userManager)
+        //public AccountantsController(WarehouseDbContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
             _userManager = userManager;
@@ -49,7 +51,7 @@ namespace WebApplication5.Controllers
         }
 
         // GET:Create
-        [Authorize(Roles = "Администратор")]
+        [Authorize]
         public IActionResult Create()
         {
             ViewData["DepID"] = new SelectList(_context.Departaments, "id", "name");
@@ -74,7 +76,7 @@ namespace WebApplication5.Controllers
         }
 
         // GET: Edit
-        [Authorize(Roles = "Администратор")]
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -124,7 +126,7 @@ namespace WebApplication5.Controllers
         }
 
         // GET:Delete
-        [Authorize(Roles = "Администратор")]
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

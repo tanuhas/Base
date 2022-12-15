@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 using WebApplication5.Areas.Identity.Data;
@@ -8,6 +9,7 @@ using WebApplication5.Models.Domain;
 
 namespace WebApplication5.Controllers
 {
+    [Authorize]
     public class WarehousesController : Controller
     {
         private readonly WarehouseDbContext warehouseDbContext;

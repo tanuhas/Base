@@ -49,7 +49,7 @@ namespace WebApplication5.Controllers
         }
 
         // GET:Create
-        [Authorize(Roles = "Администратор")]
+       // [Authorize(Roles = "Администратор")]
         public IActionResult Create()
         {
             ViewData["DepID"] = new SelectList(_context.Departaments, "id", "name");

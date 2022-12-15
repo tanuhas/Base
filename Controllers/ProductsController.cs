@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 using WebApplication5.Areas.Identity.Data;
@@ -8,6 +9,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace WebApplication5.Controllers
 {
+    
     public class ProductsController : Controller
     {
         private readonly WarehouseDbContext warehouseDbContext;
@@ -16,19 +18,20 @@ namespace WebApplication5.Controllers
         {
             this.warehouseDbContext = warehouseDbContext;
         }
+        [Authorize(Roles = "Бухгалтер, Владелец базы")]
         [HttpGet]
         public async Task<IActionResult> Index()
         {
             var products = await warehouseDbContext.Products.ToListAsync();
             return View(products);
         }
-
+        [Authorize(Roles = "Владелец базы")]
         [HttpGet]
         public IActionResult Add()
         {
             return View();
         }
-
+        [Authorize(Roles = "Владелец базы")]
         [HttpPost]
         public async Task<IActionResult> Add(AddProductViewModel addProductRequest)
         {
@@ -44,6 +47,8 @@ namespace WebApplication5.Controllers
             await warehouseDbContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
+
+        [Authorize(Roles = "Бухгалтер, Владелец базы")]
         [HttpGet]
         public async Task<IActionResult> View(Guid id)
         {
@@ -64,7 +69,8 @@ namespace WebApplication5.Controllers
             }
             return RedirectToAction("Index");
         }
-
+        
+        [Authorize(Roles = "Бухгалтер, Владелец базы")]
         [HttpPost]
         public async Task<IActionResult> View(UpdateProductViewModel model)
         {
@@ -83,6 +89,8 @@ namespace WebApplication5.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        [Authorize(Roles = "Владелец базы")]
         [HttpPost]
         public async Task<IActionResult> Delete(UpdateProductViewModel model)
         {
@@ -97,6 +105,9 @@ namespace WebApplication5.Controllers
             }
             return RedirectToAction("Index");
         }
+        
+        [Authorize(Roles = "Бухгалтер, Владелец базы")]
+
         public async Task<IActionResult> Index(string searchString)
         {
             var products = from m in warehouseDbContext.Products

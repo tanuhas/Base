@@ -6,7 +6,7 @@ namespace WebApplication5.Models
 {
     public class User:IdentityUser
     {
-        //public virtual Manager? Manager { get; set; }
+        public virtual Manager? Manager { get; set; }
         public virtual Owner? Owner { get; set; }
         public virtual Storekeeper? Storekeeper { get; set; }
         public virtual Packer? Packer { get; set; }

@@ -10,35 +10,15 @@
   <ItemGroup>
     <Compile Remove="Data\**" />
     <Compile Remove="Migrations\**" />
-    <Compile Remove="Views\Roles\**" />
     <Content Remove="Data\**" />
     <Content Remove="Migrations\**" />
-    <Content Remove="Views\Roles\**" />
     <EmbeddedResource Remove="Data\**" />
     <EmbeddedResource Remove="Migrations\**" />
-    <EmbeddedResource Remove="Views\Roles\**" />
     <None Remove="Data\**" />
     <None Remove="Migrations\**" />
-    <None Remove="Views\Roles\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Controllers\AccountantsController.cs" />
-    <Compile Remove="Controllers\ManagersController.cs" />
-    <Compile Remove="Controllers\OwnersController.cs" />
-    <Compile Remove="Controllers\PackersController.cs" />
-    <Compile Remove="Controllers\RolesController.cs" />
-    <Compile Remove="Controllers\StorekeepersController.cs" />
-    <Compile Remove="Models\Accountant.cs" />
-    <Compile Remove="Models\ChangeRoleViewModel.cs" />
-    <Compile Remove="Models\Degree.cs" />
-    <Compile Remove="Models\Departament.cs" />
-    <Compile Remove="Models\Emploee.cs" />
-    <Compile Remove="Models\Manager.cs" />
-    <Compile Remove="Models\Owner.cs" />
-    <Compile Remove="Models\Packer.cs" />
-    <Compile Remove="Models\Storekeeper.cs" />
-    <Compile Remove="Models\User.cs" />
     <Compile Remove="Views\Shared\Index.cshtml.cs" />
   </ItemGroup>
 
@@ -49,6 +29,11 @@
   <ItemGroup>
     <None Include="Views\Home\Index.cshtml" />
     <None Include="Views\Home\Privacy.cshtml" />
+    <None Include="Views\Roles\Create.cshtml" />
+    <None Include="Views\Roles\Edit.cshtml" />
+    <None Include="Views\Roles\EditIds.cshtml" />
+    <None Include="Views\Roles\Index.cshtml" />
+    <None Include="Views\Roles\UserList.cshtml" />
     <None Include="Views\Shared\Error.cshtml" />
     <None Include="Views\Shared\_Layout.cshtml" />
     <None Include="Views\Shared\_LoginPartial.cshtml" />
