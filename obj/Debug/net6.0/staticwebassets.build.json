@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pa5iPhHZXMckl1Mf6Z+5hnUazh5A3WQTV0NXKzfp/W0=",
+  "Hash": "PsstqrRuUb/Hogt56MkM0IF85fUD6am5mADgVUsw7JM=",
   "Source": "WebApplication5",
   "BasePath": "_content/WebApplication5",
   "Mode": "Default",
@@ -2089,6 +2089,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\ВлГУ\\3 курс\\5 семестр\\Технологии программирования\\Курсовая работа\\WebApplication5\\WebApplication5\\wwwroot\\Photo\\pict1.png",
+      "SourceId": "WebApplication5",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ВлГУ\\3 курс\\5 семестр\\Технологии программирования\\Курсовая работа\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "BasePath": "_content/WebApplication5",
+      "RelativePath": "Photo/pict1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Photo\\pict1.png"
+    },
+    {
+      "Identity": "D:\\ВлГУ\\3 курс\\5 семестр\\Технологии программирования\\Курсовая работа\\WebApplication5\\WebApplication5\\wwwroot\\Photo\\pict2.png",
+      "SourceId": "WebApplication5",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ВлГУ\\3 курс\\5 семестр\\Технологии программирования\\Курсовая работа\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "BasePath": "_content/WebApplication5",
+      "RelativePath": "Photo/pict2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Photo\\pict2.png"
     }
   ]
 }

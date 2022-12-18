@@ -5,11 +5,11 @@
 @{
     ViewData["Title"] = "Оптовая база";
 }
-<h1>Оптовая база</h1>
+<h1 style="color:orangered"> Оптовая база</h1>
 @if (SignInManager.IsSignedIn(User))
 {
-<span>Вы находитесь в аккауте</span>
+    <h5><span style="color:#FFD700">Вы находитесь в аккауте</span></h5>
 }
 else{
-    <span> Вы не находитесь в аккаунте</span>
+    <h5><span style="color:#FFD700"> Вы не находитесь в аккаунте</span></h5>
 }

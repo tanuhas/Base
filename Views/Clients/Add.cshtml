@@ -1,0 +1,19 @@
+﻿@model WebApplication5.Models.AddClientViewModel
+@{
+}
+<h1>Добавить заказчика</h1>
+<form method="post" action="Add">
+    <div class="mb-3">
+        <label for="" class="form-label">ФИО</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Номер телефона</label>
+        <input type="text" class="form-control" asp-for="PhoneNumber">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Адрес</label>
+        <input type="text" class="form-control" asp-for="Address">
+    </div>
+    <input type="submit" value="Добавить" />
+</form>

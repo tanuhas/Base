@@ -9,7 +9,7 @@ using WebApplication5.Models.Domain;
 
 namespace WebApplication5.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Владелец базы,Заведующий")]
     public class WarehousesController : Controller
     {
         private readonly WarehouseDbContext warehouseDbContext;

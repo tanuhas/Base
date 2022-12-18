@@ -1,0 +1,24 @@
+﻿@model WebApplication5.Models.UpdateClientViewModel
+@{
+}
+<h1>Редактировать информацию о клиенте</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Идентификатор клиента</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">ФИО</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Номер телефона</label>
+        <input type="text" class="form-control" asp-for="PhoneNumber">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Адрес</label>
+        <input type="text" class="form-control" asp-for="Address">
+    </div>
+    <button type="submit" class="btn btn-primary">Изменить</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Clients">Удалить</button>
+</form>

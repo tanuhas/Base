@@ -9,7 +9,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace WebApplication5.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Владелец базы")]
     public class EmployeesController : Controller
     {
         private readonly WarehouseDbContext warehouseDbContext;

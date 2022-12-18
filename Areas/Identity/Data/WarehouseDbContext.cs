@@ -13,6 +13,7 @@ namespace WebApplication5.Areas.Identity.Data
         public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Client> Clients { get; set; }
         public DbSet<Owner> Departaments { get; set; }
         public DbSet<Manager> Managers { get; set; }
         public DbSet<Storekeeper> Storekeepers { get; set; }
@@ -24,19 +25,4 @@ namespace WebApplication5.Areas.Identity.Data
             Database.EnsureCreated();
         }
     }
-
-
-    //public class WarehouseDbContext : IdentityDbContext
-
-    //{
-    //  public WarehouseDbContext(DbContextOptions options) : base(options) { }
-    //  public DbSet<Warehouse> Warehouses { get; set; }
-    //   public DbSet<Employee> Employees { get; set; }
-    //   public DbSet<Product> Products { get; set; }
-    //   public DbSet<Owner> Departaments { get; set; }
-    //   public DbSet<Manager> Managers { get; set; }
-    //   public DbSet<Storekeeper> Storekeepers { get; set; }
-    //   public DbSet<Packer> Packers { get; set; }
-    //   public DbSet<Accountant> Accountants { get; set; }
-    // }
 }
