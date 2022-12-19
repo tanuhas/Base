@@ -1,0 +1,31 @@
+﻿@model WebApplication5.Models.Domain.Contract
+
+@{
+    ViewData["Title"] = "Datails";
+}
+
+<h1 style="color:orangered">Детальный просмотр</h1>
+
+<div>
+    <h4>Договор @Html.DisplayFor(model => model.Id)</h4>
+    <hr />
+        <h5>Договор составил(-а): @Html.DisplayFor(model => model.EmployeeFIO)</h5>
+        <h5>Должность сотрудника: @Html.DisplayFor(model => model.Post)</h5>
+        <h5>Наименование товара: @Html.DisplayFor(model => model.Name)</h5>
+        <h5>Цена товара: @Html.DisplayFor(model => model.Price)</h5>
+        <h5>Количество товара: @Html.DisplayFor(model => model.Quantity)</h5>
+        <h5>Наименование товара: @Html.DisplayFor(model => model.Name1)</h5>
+        <h5>Цена товара: @Html.DisplayFor(model => model.Price1)</h5>
+        <h5>Количество товара: @Html.DisplayFor(model => model.Quantity1)</h5>
+        <h5>Наименование товара: @Html.DisplayFor(model => model.Name2)</h5>
+        <h5>Цена товара: @Html.DisplayFor(model => model.Price2)</h5>
+        <h5>Количество товара: @Html.DisplayFor(model => model.Quantity2)</h5>
+        <h5>ФИО клиента: @Html.DisplayFor(model => model.ClientFIO)</h5>
+        <h5>Личный номер клиента: @Html.DisplayFor(model => model.PhoneNumber)</h5>
+        <h5>Адрес клиента: @Html.DisplayFor(model => model.Address)</h5>
+        <h5>Дата составления договора: @Html.DisplayFor(model => model.Date)</h5>
+</div>
+<div>
+    <a asp-action="Index">Вернуться назад</a>
+
+</div>

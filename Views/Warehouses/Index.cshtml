@@ -2,7 +2,7 @@
 @{
 }
 
-<h1>Склады</h1>
+<h1 style="color:orangered">Склады</h1>
 
 <table class="table">
     <form asp-controller="Warehouses" asp-action="Index">
@@ -28,7 +28,7 @@
                 <td>@warehouse.Name</td>
                 <td>@warehouse.PhoneNumber</td>
                 <td>@warehouse.Address</td>
-                <td><a href="Warehouses/View/@warehouse.Id">Подробнее</a></td>
+                <td><a href="Warehouses/View/@warehouse.Id">Изменить/Удалить</a></td>
             </tr>
         }
     </tbody>

@@ -1,7 +1,7 @@
 ﻿@model List<WebApplication5.Models.Domain.Client>
 @{
 }
-<h1>Список заказчиков</h1>
+<h1 style ="color:orangered">Список заказчиков</h1>
 
 <table class="table">
     <form asp-controller="Clients" asp-action="Index">
@@ -26,7 +26,7 @@
                 <td>@client.Name</td>
                 <td>@client.PhoneNumber</td>
                 <td>@client.Address</td>
-                <td><a href="Clients/View/@client.Id">Подробнее</a></td>
+                <td><a href="Clients/View/@client.Id">Изменить/Удалить</a></td>
             </tr>
         }
     </tbody>

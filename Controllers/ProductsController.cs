@@ -41,6 +41,7 @@ namespace WebApplication5.Controllers
                 Name = addProductRequest.Name,
                 Quantity = addProductRequest.Quantity,
                 Price = addProductRequest.Price,
+                NameP = addProductRequest.NameP,
                 IdW = addProductRequest.IdW
             };
             await warehouseDbContext.Products.AddAsync(product);
@@ -63,6 +64,7 @@ namespace WebApplication5.Controllers
                     Name = product.Name,
                     Quantity = product.Quantity,
                     Price = product.Price,
+                    NameP = product.NameP,
                     IdW = product.IdW
                 };
                 return await Task.Run(() => View("View", viewModel));
@@ -81,6 +83,7 @@ namespace WebApplication5.Controllers
                 product.Name = model.Name;
                 product.Quantity = model.Quantity;
                 product.Price = model.Price;
+                product.NameP = model.NameP;
                 product.IdW = model.IdW;
 
                 await warehouseDbContext.SaveChangesAsync();

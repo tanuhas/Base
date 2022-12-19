@@ -1,0 +1,67 @@
+﻿@model WebApplication5.Models.AddContractViewModel
+@{
+}
+<h1 style="color:orangered">Добавить договор</h1>
+<form method="post" action="Add">
+    <div class="mb-3">
+        <label for="" class="form-label">ФИО Сотрудника</label>
+        <input type="text" class="form-control" asp-for="EmployeeFIO">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Должность</label>
+        <input type="text" class="form-control" asp-for="Post">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Наименование товара</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Количество товара</label>
+        <input type="text" class="form-control" asp-for="Quantity">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Цена</label>
+        <input type="text" class="form-control" asp-for="Price">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Артикул товара</label>
+        <input type="text" class="form-control" asp-for="Name1">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Количество товара</label>
+        <input type="text" class="form-control" asp-for="Quantity1">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Цена</label>
+        <input type="text" class="form-control" asp-for="Price1">
+    </div>
+     <div class="mb-3">
+        <label for="" class="form-label">Артикул товара</label>
+        <input type="text" class="form-control" asp-for="Name2">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Количество товара</label>
+        <input type="text" class="form-control" asp-for="Quantity2">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Цена</label>
+        <input type="text" class="form-control" asp-for="Price2">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">ФИО заказчика</label>
+        <input type="text" class="form-control" asp-for="ClientFIO">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Номер телефона заказчика</label>
+        <input type="text" class="form-control" asp-for="PhoneNumber">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Адрес заказчика</label>
+        <input type="text" class="form-control" asp-for="Address">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Дата составления заказа</label>
+        <input type="date" class="form-control" asp-for="Date">
+    </div>
+    <input type="submit" value="Добавить" />
+</form>

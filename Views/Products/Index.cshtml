@@ -2,7 +2,7 @@
 @{
 }
 
-<h1>Товары</h1>
+<h1 style="color:orangered">Товары</h1>
 
 <table class="table">
     <form asp-controller="Products" asp-action="Index">
@@ -17,7 +17,8 @@
             <th>Название товара</th>
             <th>Количество товара</th>
             <th>Цена товара</th>
-            <th>Название склада</th>
+            <th>Наименование поставщика</th>
+            <th>Название склада</th>            
             <th>Подробнее</th>
         </tr>
     </thead>
@@ -29,8 +30,9 @@
                 <td>@product.Name</td>
                 <td>@product.Quantity</td>
                 <td>@product.Price</td>
+                <td>@product.NameP</td>
                 <td>@product.IdW</td>
-                <td><a href="Products/View/@product.Id">Подробнее</a></td>
+                <td><a href="Products/View/@product.Id">Изменить/Удалить</a></td>
             </tr>
         }
     </tbody>

@@ -1,0 +1,19 @@
+﻿@model WebApplication5.Models.Domain.Provider
+
+@{
+    ViewData["Title"] = "Datails";
+}
+
+<h1 style="color:orangered">Детальный просмотр</h1>
+
+<div>
+    <h4>Поставщик @Html.DisplayFor(model => model.Id)</h4>
+    <hr />
+        <h5>Договор составил(-а): @Html.DisplayFor(model => model.Name)</h5>
+        <h5>Должность сотрудника: @Html.DisplayFor(model => model.PhoneNumber)</h5>
+        <h5>Наименование товара: @Html.DisplayFor(model => model.Address)</h5>
+</div>
+<div>
+    <a asp-action="Index">Вернуться назад</a>
+
+</div>

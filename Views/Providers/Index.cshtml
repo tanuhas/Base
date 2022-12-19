@@ -1,0 +1,35 @@
+﻿@model List<WebApplication5.Models.Domain.Provider>
+@{
+}
+<h1 style="color:orangered">Список поставщиков</h1>
+
+<table class="table">
+    <form asp-controller="Providers" asp-action="Index">
+        <p>
+            Введите наименование организации <input type="text" name="SearchString" />
+            <input type="submit" value="Поиск" />
+        </p>
+    </form>
+    <thead>
+        <tr>
+            <th>Идентификатор поставщика</th>
+            <th>Наименование организации</th>
+            <th>Номер телефона</th>
+            <th>Адрес</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var provider in Model)
+        {
+            <tr>
+                <td>@provider.Id</td>
+                <td>@provider.Name</td>
+                <td>@provider.PhoneNumber</td>
+                <td>@provider.Address</td>
+                <td><a href="Providers/View/@provider.Id">Изменить/Удалить</a></td>
+                <td><a asp-controller="Providers" asp-action="Details" asp-route-id="@provider.Id">Детальная информация</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h6><a class="nav-link text-dark" asp-area="" asp-controller="Providers" asp-action="Add">Добавить поставщика</a></h6>

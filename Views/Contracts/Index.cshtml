@@ -1,0 +1,36 @@
+﻿@model List<WebApplication5.Models.Domain.Contract>
+@{
+}
+<h1 style="color:orangered">Список договоров</h1>
+
+<table class="table">
+    <form asp-controller="Clients" asp-action="Index">
+        <p>
+            Введите ФИО заказчика <input type="text" name="SearchString" />
+            <input type="submit" value="Поиск" />
+        </p>
+    </form>
+    <thead>
+        <tr>
+            <th>Идентификатор договора</th>
+            <th>ФИО заказчика</th>
+            <th>Номер телефона</th>
+            <th>Изменить/Удалить</th>
+            <th>Детали договора</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contract in Model)
+        {
+            <tr>
+                <td>@contract.Id</td>
+                <td>@contract.ClientFIO</td>
+                <td>@contract.PhoneNumber</td>
+                <td><a href="Contracts/View/@contract.Id">Изменить/Удалить</a></td>
+                <td><a asp-action="Details" asp-route-id="@contract.Id">Детали договора</a></td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+<h6><a class="nav-link text-dark" asp-area="" asp-controller="Contracts" asp-action="Add">Добавить договор</a></h6>

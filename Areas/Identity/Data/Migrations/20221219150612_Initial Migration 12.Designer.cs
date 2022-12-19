@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApplication5.Areas.Identity.Data;
 
@@ -11,9 +12,10 @@ using WebApplication5.Areas.Identity.Data;
 namespace WebApplication5.Migrations
 {
     [DbContext(typeof(WarehouseDbContext))]
-    partial class WarehouseDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221219150612_Initial Migration 12")]
+    partial class InitialMigration12
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -243,6 +245,15 @@ namespace WebApplication5.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Articul")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Articul1")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Articul2")
+                        .HasColumnType("int");
+
                     b.Property<string>("ClientFIO")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -251,18 +262,6 @@ namespace WebApplication5.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("EmployeeFIO")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name1")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name2")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

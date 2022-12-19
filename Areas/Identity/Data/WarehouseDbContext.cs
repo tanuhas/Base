@@ -14,6 +14,8 @@ namespace WebApplication5.Areas.Identity.Data
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Client> Clients { get; set; }
+        public DbSet<Provider> Providers { get; set; }
+        public DbSet<Contract> Contracts { get; set; }
         public DbSet<Owner> Departaments { get; set; }
         public DbSet<Manager> Managers { get; set; }
         public DbSet<Storekeeper> Storekeepers { get; set; }

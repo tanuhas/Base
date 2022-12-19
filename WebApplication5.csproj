@@ -27,6 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Contracts\Add.cshtml" />
+    <None Include="Views\Contracts\Index.cshtml" />
+    <None Include="Views\Contracts\View.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
     <None Include="Views\Home\Privacy.cshtml" />
     <None Include="Views\Roles\Create.cshtml" />

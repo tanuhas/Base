@@ -2,7 +2,7 @@
 @{
 }
 
-<h1>Сотрудники</h1>
+<h1 style="color:orangered">Сотрудники</h1>
 
 <table class="table">
     <form asp-controller="Employees" asp-action="Index">
@@ -28,7 +28,7 @@
                 <td>@employee.FIO</td>
                 <td>@employee.Post</td>
                 <td>@employee.Salary</td>
-                <td><a href="Employees/View/@employee.Id">Подробнее</a></td>
+                <td><a href="Employees/View/@employee.Id">Изменить/Удалить</a></td>
             </tr>
         }
     </tbody>
