@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 namespace WebApplication5.Models
 {
-    public class Emploee
+    public class Person
     {
         public int ID { get; set; }
 

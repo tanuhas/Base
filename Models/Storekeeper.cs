@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 namespace WebApplication5.Models
 {
-    public class Storekeeper : Emploee
+    public class Storekeeper : Person
     {
         [Display(Name = "Департамент")]
         public int depID { get; set; }

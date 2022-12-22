@@ -5,7 +5,7 @@ using WebApplication5.Models.Domain;
 
 namespace WebApplication5.Models
 {
-    public class Owner : Emploee
+    public class Owner : Person
     {
         [Display(Name = "Департамент")]
         public int? depID { get; set; }

@@ -5,7 +5,7 @@ using WebApplication5.Models.Domain;
 
 namespace WebApplication5.Models
 {
-    public class Packer : Emploee
+    public class Packer : Person
     {
         [Display(Name = "Департамент")]
         public int? depID { get; set; }
